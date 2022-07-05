@@ -30,3 +30,17 @@ function showCollection( collection ){
 }
 
 showCollection( collection );
+
+function findByArtist( artist ){
+    let results = [];
+    for ( let albums of collection ){
+        if ( albums.artist == artist ){
+            results.push(albums);
+        }
+    }
+    return results;
+}
+
+console.log(findByArtist ( 'Drake' ));
+console.log(findByArtist ( 'Kanye East' ));
+console.log(findByArtist ( 'Linkin Park' ));
