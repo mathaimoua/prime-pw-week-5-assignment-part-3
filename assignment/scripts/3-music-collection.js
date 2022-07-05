@@ -5,7 +5,7 @@ function addToCollection( title, artist, yearPublished ){
    let album = {
     title: title,
     artist: artist,
-    year: yearPublished
+    yearPublished: yearPublished
    }
    //console.log( album );
    collection.push(album);
@@ -20,3 +20,13 @@ console.log(addToCollection( "Believe Acoustic", "Justin Biever", 2013 ));
 console.log(addToCollection( "Kamikaze", "Twista", 2004 ));
 
 console.log( collection );
+
+function showCollection( collection ){
+    console.log( collection.length, 'albums' );
+    for ( let i =0; i<collection.length; i++ ){
+        console.log( collection[i].title, 'by', collection[i].artist + ', published in year',
+        collection[i].yearPublished);
+    }
+}
+
+showCollection( collection );
